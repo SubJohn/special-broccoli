@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    The Indian Ocean Slave Trade Project - The Indian Ocean Slave Trade
+    
+  </title>
+
+  <meta name="description" content="Mapping Slave Journeys in the Indian Ocean Slave Trade">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="The Indian Ocean Slave Trade" href="/feed.xml">
+
+<!---
+What follows are the bits of code required for MapBox maps to appear properly if you include them on your page. If you decide to use a different theme, you'll have to copy them across into whatever file determines what gets included in the "head" section of the page.
+--->
+
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+
+
+  <body>
+
+    <!--Navigation-->
+
+<!--
+To add new links, follow the example below (and activate it it by removing the arrowy things!) Copy and paste as many times as needed, but bear in mind that the bar can get rather crowded quickly.
+-->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="/">Home</a> <!--this is where you can change the "home" button text-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+<!-- To add a clickable item with sub, items, copy from here... -->
+    <!--Sample dropdown -->
+    <!--    <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About the Project</a><!-- Text of a clickable drop-down menu button -->
+    <!--        <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Contributors</a><!--Item in drop-down menu-->
+    <!--            <a class="dropdown-item" href="#">Another action</a><!--Item in drop-down menu-->
+    <!--            <div class="dropdown-divider"></div><!--This indicates that a thin line should be inserted, in case you want to differentiate the items-->
+  <!--              <a class="dropdown-item" href="#">Something else here</a><!-- Item in drop-down menu -->
+<!--            </div> <!-- ...To here -->
+
+
+            <!--About the Project -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About the Project</a><!-- Text of a clickable drop-down menu button -->
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/projectaim">Aims of the Project</a><!--Item in drop-down menu-->
+                        <a class="dropdown-item" href="/archives">Archives & Manumission Statements</a><!-- Item in drop-down menu -->
+                        <a class="dropdown-item" href="/silences">Silences in the Archives</a><!-- Item in drop-down menu -->
+                        <div class="dropdown-divider"></div><!--This indicates that a thin line should be inserted, in case you want to differentiate the items-->
+                        <a class="dropdown-item" href="/contributors">Contributors</a><!--Item in drop-down menu-->
+                          </div> <!-- ...To here -->
+
+                    <!--Types of Slavery -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Types of Slavery</a><!-- Text of a clickable drop-down menu button -->
+                            <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/pearldivers">Pearl Divers</a><!--Item in drop-down menu-->
+                                <a class="dropdown-item" href="/datefarmers">Date Farmers</a><!--Item in drop-down menu-->
+                                <a class="dropdown-item" href="/labor">Domestic Labor</a><!-- Item in drop-down menu -->
+                                <a class="dropdown-item" href="/concubine">Concubinage</a><!-- Item in drop-down menu -->
+                                <a class="dropdown-item" href="/childslavery">Child Slavery</a><!--Item in drop-down menu-->
+                            </div> <!-- ...To here -->
+
+                  <!--Experiences of Slavery -->
+                      <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Experiences of Slavery</a><!-- Text of a clickable drop-down menu button -->
+                             <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/slaves">Who can be made a slave?</a><!--Item in drop-down menu-->
+                                <a class="dropdown-item" href="/slaveroutes">Slave Routes</a><!--Item in drop-down menu-->
+                                <a class="dropdown-item" href="/marriage">Slave Marriage</a><!-- Item in drop-down menu -->
+                                <a class="dropdown-item" href="/abuse">Abuse & Sexual Assault</a><!-- Item in drop-down menu -->
+                            </div> <!-- ...To here -->
+
+                  <!--Slave Journeys-->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Slaves' Journey</a><!-- Text of a clickable drop-down menu button -->
+                           <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="/binhashim">Su’aiyid bin Hashim</a><!--Item in drop-down menu-->
+                              <a class="dropdown-item" href="/maryam">Maryam Daughter of Omar</a><!-- Item in drop-down menu -->
+                              <a class="dropdown-item" href="/binhasan">Zayyud bin Hasan</a><!-- Item in drop-down menu -->
+                              <a class="dropdown-item" href="/alutaibi">Abdullah Al’Utaibi</a><!--Item in drop-down menu-->
+                                      </div> <!-- ...To here -->
+
+                  <!--Slavery in the Indian Ocean-->
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Slavery in the Indian Ocean</a><!-- Text of a clickable drop-down menu button -->
+                      <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/britishrule">British Rule in the Perian Gulf</a><!--Item in drop-down menu-->
+                          <a class="dropdown-item" href="/slavetrade">Slave Trade</a><!-- Item in drop-down menu -->
+                          <a class="dropdown-item" href="/debates">Current Debates</a><!-- Item in drop-down menu -->
+                          <a class="dropdown-item" href="/resources">Resources</a><!-- Item in drop-down menu -->
+                                  </div> <!-- ...To here -->
+
+                         </li>
+                  <!-- Contact -->
+                         </li>
+                            <li class="nav-item"> <!-- A normal, non clickable menu button -->
+                              <a class="nav-link" href="/contact">Contact Us</a>
+                                  </li>
+
+
+
+
+<!-- To add a normal item with copy from here... -->
+    <!--    </li>
+        <li class="nav-item"> <!-- A normal, non clickable menu button -->
+<!--          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/posts">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/updates">Yemen War Updates</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Contact">Contact</a>
+        </li> <!-- ...To here -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Page Header -->
+
+<header class="masthead" style="background-image: url('/img/map8.jpg')">
+
+  <div class="overlay"></div>
+  <div class="container" style="max-width: 100%">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 mx-auto">
+        <div class="page-heading">
+          <h1>The Indian Ocean Slave Trade Project</h1>
+          
+            <span class="subheading">Mapping Slave Journeys and Experiences in the Indian Ocean</span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 mx-auto">
+
+      <!--
+<iframe src="index-map.html" width="100%" height ="600px" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" usemap="file://Websites/map_interactive/index.html"></iframe>
+-->
+<center> <h1>Welcome to the Indian Ocean Slave Trade Project</h1> </center>
+<p align="justify">
+ This project aims to provide both scholars and the public with accessible and easily navigable information on the Indian Ocean slave trade during the 19th and 20th centuries. Like the Atlantic slave trade, millions of Africans and other peoples were abducted and transported across the Indian Ocean to work as slaves in foreign lands. In contrast to the Atlantic slave trade, however, which boasts an extensive scholarly literature and a greater public awareness, few publicly available resources are devoted to the study of the Indian Ocean slave trade. In order to increase awareness of the legacy of the Indian Ocean slave trade and to facilitate further study, this site presents multiple resources. </p>
+<p align="justify">
+  As you can see from the heat map below, our data and project currently emphasizes the East African slave trade to the Persian Gulf. However, this is an ongoing project with much more to explore, and thus our data (and maps) will continue to be expanded and revised. In the near future, we intend to expand the project to include slave routes and experiences in the Arabian Peninsula, Yemen, the Red Sea, Egypt, Sudan, and from East Africa to the Atlantic world.</p>
+
+ <iframe src="https://api.mapbox.com/styles/v1/galshaif/cjwjv7jgs1bmw1cqdmf9xyfj9.html?fresh=true&title=true&access_token=pk.eyJ1IjoiZ2Fsc2hhaWYiLCJhIjoiY2pyaDFjMjl5MWgyYzQ5cXF2d3VlaWpjYiJ9.OEhQEgL1Bk34MgfDwHs5eQ#3.1/11.081674/42.161687/0" width="100%" height ="600px" frameborder="0"></iframe>
+
+<h3>Under each of the above tabs, you will find:</h3>
+ <ul>
+   <li><b>About the Project:</b> A more thorough discussion on the aims of the Indian Ocean Slave Trade Project, the archives and sources used in the project, and the limits of and sliences embedded in such sources. You will also find more information on the contributors of this project. </li>
+   <li><b>Types of Slavery:</b> Discussion on of the types of slavery that took place in the Indian Ocean slave trade.</li>
+   <li><b>Experiences of Slavery:</b> Examples and analyses of slaves’ individual and collective experiences.</li>
+   <li><b>Slaves' Journey:</b> Interactive maps tracing both individual and collective slave routes.</li>
+  <li><b>Slavery in the Indian Ocean:</b> An overview of British rule in the Persian Gulf, the Indian Ocean slave trade, and the current debates in the historiography of slavery in the Indian Ocean.</li>
+  <li><b>Resources:</b> A list of important resources on the Indian Ocean slave trade including other mapping projects doing similar work as this one.</li>
+ </ul>
+<p align="justify">
+  In providing the above information, we hope that this project will complement similar mapping projects and publicly available resources on the routes and experiences of the Atlantic slave trade and to provide both scholars and the public with a better understanding of slavery as a global phenomenon and its eventual abolition. </p>
+
+
+<!--
+       <iframe src="index-map.html" width="100%" height ="600px" frameborder="0" style="display: block; margin-left: auto; margin-right: auto;" usemap="index-map.html"></iframe>-->
+
+
+    </div>
+  </div>
+</div>
+
+
+    <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/galshaif">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Gokh Amin Alshaif & Eric Massie 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/assets/scripts.js"></script>
+
+
+
+
+  </body>
+
+</html>
